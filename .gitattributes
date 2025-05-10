@@ -1,0 +1,16 @@
+# Normalize text files to LF in the repository
+* text=auto
+
+# Explicitly set line endings for specific file types
+*.js text eol=lf
+*.jsx text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.json text eol=lf
+
+# Treat binary files as-is
+*.png binary
+*.jpg binary
+*.svg binary
+*.ico binary
+*.gif binary
