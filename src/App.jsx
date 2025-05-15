@@ -6,7 +6,7 @@ import HomePage from "./pages/HomePage";
 import RentalPropertyCard from "./pages/RentalPropertyCard"; // Import the Rental Property Card component
 import AboutPage from "./pages/AboutPage"; // Import the About Page component
 import NotFoundPage from "./pages/NotFoundPage"; // Import the Not Found Page component
-import "./App.css"; // Import the CSS file for styling
+import "./App.scss"; // Import the SCSS file for styling
 
 function App() {
   return (
