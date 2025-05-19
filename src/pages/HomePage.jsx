@@ -1,11 +1,13 @@
 import { useState } from "react";
 import reactLogo from "../assets/react.svg";
 import viteLogo from "/vite.svg";
+import Header from "../components/Header";
 
 function HomePage() {
   const [count, setCount] = useState(0);
   return (
-    <>
+    <>AlxjknAJLKXNao'x
+    <Header />
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
