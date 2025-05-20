@@ -7,10 +7,14 @@ import RentalPropertyCard from "./pages/RentalPropertyCard"; // Import the Renta
 import AboutPage from "./pages/AboutPage"; // Import the About Page component
 import NotFoundPage from "./pages/NotFoundPage"; // Import the Not Found Page component
 import "./App.Scss"; // Import the SCSS file for styling
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
 
 function App() {
   return (
     <>
+      <Header />
       <nav>
         <Link to="/">Home</Link> | <Link to="/about">About</Link> |{" "}
         <Link to="/property">Rental Property</Link>
@@ -22,6 +26,8 @@ function App() {
         <Route path="/property" element={<RentalPropertyCard />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
+
+      <Footer />
     </>
   );
 }

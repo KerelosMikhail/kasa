@@ -1,9 +1,6 @@
-import Header from "../components/Header";
-
 function RentalPropertyCard() {
   return (
     <>
-      <Header />
       <h1>Rental Property Card</h1>
       <div className="rental-property-card">
         <h2>Property Title</h2>

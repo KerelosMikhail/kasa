@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+
 
 function NotFoundPage() {
   return <h1>404 - page not found</h1>;
