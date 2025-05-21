@@ -4,11 +4,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-left: 100px;
+  margin-right: auto;
 
   &__logo {
     width: 210.32px;
     height: 62.26px;
     object-fit: contain;
+    // margin-left: 100px;
   }
 
   &__nav {
@@ -35,22 +38,24 @@
 
   // Responsive styles for mobile and small screens
   @media (max-width: 600px) {
-    width: 335px; 
-    height: 46.88px; 
+    width: 335px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 46.88px;
 
     &__logo {
-      width: 100px; 
+      width: 100px;
       height: 46.88px;
     }
 
     &__nav {
-      gap: 20px; 
+      gap: 20px;
     }
 
     &__link {
-      font-size: 12px; 
-      font-weight: 500; 
-      padding-bottom: 2px; 
+      font-size: 12px;
+      font-weight: 500;
+      padding-bottom: 2px;
     }
   }
 }

@@ -1,0 +1,103 @@
+// @use "../styles/fonts" as *;
+@use "../styles/fonts";
+
+.banner {
+  position: relative;
+  width: 1240px;
+  height: 223px;
+  margin-left: 100px;
+  margin-top: 40px;
+  border-radius: 25px;
+  border: 1px solid #000;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+
+  &__image {
+    position: absolute;
+    top: -663px;
+    left: 0;
+    width: 1240px;
+    height: 1875px;
+    object-fit: cover;
+    z-index: 1;
+  }
+
+  &__mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); // 60% black mask
+    border-radius: 25px;
+    z-index: 2;
+    mix-blend-mode: darken;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    z-index: 3;
+    display: flex;
+    //align-items:flex-end; // Vertical alignment: bottom
+    justify-content: center; // Horizontal alignment: center
+    align-items: center; // Vertical alignment: center
+    pointer-events: none;
+  }
+
+  &__text {
+    width: 100%;
+    text-align: center;
+    font-family: fonts.$main-font;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 143%;
+    color: #fff;
+    // -webkit-text-stroke: 1px #000;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000, 0px 4px 4px rgba(0, 0, 0, 0.25);
+    // text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    background: transparent;
+    z-index: 4;
+    padding: 16px 0;
+  }
+
+  // Responsive styles for mobile and small screens
+  @media (max-width: 600px) {
+    width: 335px;
+    height: 111px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    margin-top: 22px;
+
+    &__image {
+      width: 335px;
+      height: 934px; // Adjust as needed for aspect ratio
+      top: -412px;
+      object-fit: scale-down;
+    }
+
+    &__mask,
+    &__overlay {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
+
+    &__text {
+      width: 276px;
+      height: 48px;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.2;
+      padding: 8px 0;
+      white-space: pre-line; // Allows for two lines
+      text-align: start;
+    }
+  }
+}

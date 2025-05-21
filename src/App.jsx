@@ -10,15 +10,15 @@ import "./App.Scss"; // Import the SCSS file for styling
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-
 function App() {
   return (
     <>
       <Header />
-      <nav>
+
+      {/* <nav>
         <Link to="/">Home</Link> | <Link to="/about">About</Link> |{" "}
         <Link to="/property">Rental Property</Link>
-      </nav>
+      </nav> */}
 
       <Routes>
         <Route path="/" element={<HomePage />} />
