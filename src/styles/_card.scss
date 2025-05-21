@@ -1,0 +1,45 @@
+@use "../styles/fonts";
+
+.gallery-card {
+  position: relative;
+  width: 340px;
+  height: 340px;
+  border-radius: 10px;
+  background: #ff6060;
+  overflow: hidden;
+
+  &__gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+    background: linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #0a0a0a00 0%,
+      #04040469 41%,
+      #000000 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  &__text {
+    position: absolute;
+    left: 20px;
+    top: 294px;
+    width: 300px;
+    height: 26px;
+    font-family: fonts.$main-font;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 143%;
+    letter-spacing: 0;
+    color: #fff;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+  }
+}
