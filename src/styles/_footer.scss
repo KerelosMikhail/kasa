@@ -1,3 +1,5 @@
+@use "./fonts";
+
 .footer {
   width: 1440px;
   height: 209px;
@@ -22,7 +24,7 @@
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 30px;
-    font-family: $main-font;
+    font-family: fonts.$main-font;
     text-align: center;
     width: 100%;
   }
@@ -43,7 +45,7 @@
       font-size: 12px;
       font-weight: 500;
       width: 133.59px;
-      font-family: $main-font;
+      font-family: fonts.$main-font;
       margin-bottom: 30px;
       text-align: center;
       white-space: normal;
