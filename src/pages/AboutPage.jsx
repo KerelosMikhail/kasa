@@ -1,9 +1,9 @@
-
+import AboutBanner from "../components/AboutBanner";
 
 function AboutPage() {
   return (
     <>
-      <h1>About Us</h1>
+      <AboutBanner />
     </>
   );
 }

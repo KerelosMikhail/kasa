@@ -1,0 +1,74 @@
+.about-banner {
+  position: relative;
+  width: 1240px;
+  height: 223px;
+  margin-left: 100px;
+  margin-top: 40px;
+  border-radius: 25px;
+  overflow: hidden;
+
+  &__mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1240px;
+    height: 223px;
+    border-radius: 25px;
+    background: #000;
+    opacity: 0.3;
+    mix-blend-mode: darken;
+    z-index: 3;
+  }
+
+  &__image {
+    position: absolute;
+    top: -156px;
+    left: 0;
+    width: 1240px;
+    height: 827px;
+    object-fit: cover;
+    z-index: 2;
+    pointer-events: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1240px;
+    height: 223px;
+    border-radius: 25px;
+    background: #f6f6f6;
+    opacity: 1;
+    z-index: 1;
+  }
+
+  // Responsive styles for mobile and small screens
+  @media (max-width: 600px) {
+    width: 335px;
+    height: 111px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 19px;
+    border-radius: 10px;
+
+    &__mask,
+    &__overlay {
+      width: 335px;
+      height: 111px;
+      border-radius: 10px;
+    }
+
+    &__image {
+      width: 384.85px;
+      height: 111px;
+      top: 0;
+      left: -24.93px;
+      border-radius: 10px;
+    }
+  }
+}

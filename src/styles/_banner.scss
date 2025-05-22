@@ -20,6 +20,10 @@
     height: 1875px;
     object-fit: cover;
     z-index: 1;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
   }
 
   &__mask {
