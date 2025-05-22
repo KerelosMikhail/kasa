@@ -1,0 +1,68 @@
+@use "../styles/fonts" as *;
+
+.collapse {
+  background: #ff6060;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
+  margin-left: 208.5px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px 10px 10px;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 143%;
+    color: #fff;
+    letter-spacing: 0;
+    flex: 1;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  &__arrow {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    &.open {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__content {
+    overflow: hidden;
+    background: #fff;
+    border-radius: 0 0 5px 5px;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s;
+    max-height: 0;
+    padding: 0 20px 0 10px;
+
+    p {
+      font-family: $main-font;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 143%;
+      color: #000;
+      margin: 0;
+    }
+
+    &.open {
+      // max-height and padding are set inline for animation
+      max-height: 1000px; // Set a large enough value to allow for expansion
+    }
+  }
+}
