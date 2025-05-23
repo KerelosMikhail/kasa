@@ -61,8 +61,42 @@
     }
 
     &.open {
-      // max-height and padding are set inline for animation
       max-height: 1000px; // Set a large enough value to allow for expansion
+    }
+  }
+}
+
+// Responsive styles for mobile and small screens
+@media (max-width: 600px) {
+  .collapse {
+    width: 335px !important;
+    min-height: 30px !important;
+    border-radius: 5px;
+    margin: 22px auto;
+
+    &__header {
+      padding: 10px 10px 10px;
+    }
+
+    &__title {
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 143%;
+      letter-spacing: 0;
+      vertical-align: middle;
+    }
+
+    &__arrow {
+      width: 16px;
+      height: 9.14px;
+      left: 4px;
+    }
+
+    &__content {
+      padding: 0 10px 0 0;
+      p {
+        font-size: 13px;
+      }
     }
   }
 }

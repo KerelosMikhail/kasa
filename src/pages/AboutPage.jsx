@@ -7,28 +7,28 @@ function AboutPage() {
       <AboutBanner />
 
       <Collapse
-        title="More Info"
+        title="Reliability"
         paragraph="This is the detailed content that will expand and collapse."
         width="1023px"
         height="54px"
       />
 
       <Collapse
-        title="More Info"
+        title="Respect"
         paragraph="This is the detailed content that will expand and collapse."
         width="1023px"
         height="54px"
       />
 
       <Collapse
-        title="More Info"
+        title="Service"
         paragraph="This is the detailed content that will expand and collapse."
         width="1023px"
         height="54px"
       />
 
       <Collapse
-        title="More Info"
+        title="Security"
         paragraph="This is the detailed content that will expand and collapse."
         width="1023px"
         height="54px"
