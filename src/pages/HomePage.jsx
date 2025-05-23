@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Banner from "../components/Banner";
 import Card from "../components/Card";
-import thumbImage from "../assets/thumbImage.jpg";
 
 function HomePage() {
   /* Fetches gallery data from the json file.
