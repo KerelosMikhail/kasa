@@ -58,10 +58,17 @@
       line-height: 143%;
       color: #000;
       margin: 0;
+      text-align: justify;
+      gap: 10px;
+      opacity: 0;
+      transition: opacity 0.4s ease;
     }
-
     &.open {
-      max-height: 1000px; // Set a large enough value to allow for expansion
+      max-height: 1000px; // Large enough value to allow for expansion
+    }
+    p {
+      opacity: 1;
+      transition: opacity 0.4s 0.1s ease;
     }
   }
 }
