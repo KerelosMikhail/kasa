@@ -1,12 +1,11 @@
-import thumbImage from "../assets/thumbImage.jpg";
-
-function Card() {
+function Card({ title, image, id }) {
   return (
-    <div className="gallery-card">
-      <img src={thumbImage} alt="PropertyImage" className="gallery-card__img" />
+    <div className="gallery-card" data-id={id}>
+      <img src={image} alt={title} className="gallery-card__img" />
       <div className="gallery-card__gradient"></div>
-      <div className="gallery-card__text">Title of the rental property</div>
+      <div className="gallery-card__text">{title}</div>
     </div>
   );
 }
+
 export default Card;
