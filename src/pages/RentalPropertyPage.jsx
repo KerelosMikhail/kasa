@@ -1,8 +1,8 @@
-function RentalPropertyCard() {
+function RentalPropertyPage() {
   return (
     <>
-      <h1>Rental Property Card</h1>
-      <div className="rental-property-card">
+      <h1>Rental Property page</h1>
+      <div className="rental-property-page">
         <h2>Property Title</h2>
         <p>Description of the rental property.</p>
         <p>Price: $X,XXX/month</p>
@@ -12,4 +12,4 @@ function RentalPropertyCard() {
   );
 }
 
-export default RentalPropertyCard;
+export default RentalPropertyPage;
