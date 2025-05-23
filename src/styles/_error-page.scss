@@ -1,0 +1,69 @@
+@use "../styles/fonts" as *;
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  padding-top: 40px;
+  min-height: calc(100vh - 277px);
+  gap: 139px;
+
+  &__code {
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 288px;
+    line-height: 143%;
+    letter-spacing: 0;
+    color: #ff6060;
+    width: 597px;
+    // height: 263px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  &__message {
+    font-family: $main-font;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 143%;
+    letter-spacing: 0;
+    color: #ff6060;
+    width: 872px;
+    // height: 51px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  &__link {
+    font-family: $main-font;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 143%;
+    letter-spacing: 0;
+    color: #000;
+    width: 284px;
+    // height: 26px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 0 auto;
+    text-decoration: underline;
+    text-underline-offset: 0%;
+    text-decoration-thickness: 0;
+    text-decoration-style: solid;
+    cursor: pointer;
+    transition: color 0.2s;
+    margin: 0 auto 40px auto;
+
+    &:hover {
+      color: #ff6060;
+    }
+  }
+}

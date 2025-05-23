@@ -5,7 +5,7 @@ import { Routes, Route, Link } from "react-router-dom"; // Import routing compon
 import HomePage from "./pages/HomePage";
 import RentalPropertyCard from "./pages/RentalPropertyCard"; // Import the Rental Property Card component
 import AboutPage from "./pages/AboutPage"; // Import the About Page component
-import NotFoundPage from "./pages/NotFoundPage"; // Import the Not Found Page component
+import ErrorPage from "./pages/ErrorPage"; // Import Error page component
 import "./App.Scss"; // Import the SCSS file for styling
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -24,7 +24,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/property" element={<RentalPropertyCard />} />
-        <Route path="*" element={<NotFoundPage />} />
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
 
       <Footer />
