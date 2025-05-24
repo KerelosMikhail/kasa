@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Banner from "../components/Banner";
 import Card from "../components/Card";
 
@@ -19,16 +20,21 @@ function HomePage() {
     <main className="home-page">
       <Banner />
 
+      {/*Rendering a Card for each item  and check if it's null*/}
       <div className="gallery">
-        {/*Rendering a Card for each item */}
-        {gallery.map((item) => (
-          <Card
-            key={item.id}
-            id={item.id}
-            title={item.title}
-            image={item.cover}
-          />
-        ))}
+        {gallery.length > 0 ? (
+          gallery.map((item) => (
+            <Link
+              to={`/property/${item.id}`}
+              key={item.id}
+              className="link-no-decoration"
+            >
+              <Card id={item.id} title={item.title} image={item.cover} />
+            </Link>
+          ))
+        ) : (
+          <p>No items available</p>
+        )}
       </div>
     </main>
   );

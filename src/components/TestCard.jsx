@@ -1,4 +1,4 @@
-function RentalPropertyCard() {
+function TestCard() {
   return (
     <body className="RentalPropertyCard">
       {/* <img src={logo} className="logo" alt="Kasa logo" />
@@ -6,4 +6,4 @@ function RentalPropertyCard() {
     </body>
   );
 }
-export default RentalPropertyCard;
+export default TestCard;
