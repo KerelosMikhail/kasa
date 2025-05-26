@@ -1,4 +1,7 @@
 import Carousel from "../components/Carousel";
+import StarRating from "../components/StarRating";
+
+// Using StarRating <StarRating value={3} />
 
 function RentalPropertyPage() {
   const images = [
@@ -12,6 +15,7 @@ function RentalPropertyPage() {
   return (
     <div className="rental-property-page">
       <Carousel images={images} />
+      <StarRating value={3} />
     </div>
   );
 }

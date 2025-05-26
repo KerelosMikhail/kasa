@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Banner from "../components/Banner";
-import Card from "../components/Card";
+import Card from "../components/PropartyCard";
 
 function HomePage() {
   /* Fetches gallery data from the json file.

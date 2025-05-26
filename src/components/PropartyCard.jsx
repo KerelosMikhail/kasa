@@ -1,4 +1,4 @@
-function Card({ title, image, id }) {
+function PropartyCard({ title, image, id }) {
   return (
     <div className="gallery-card" data-id={id}>
       <img src={image} alt={title} className="gallery-card__img" />
@@ -8,4 +8,4 @@ function Card({ title, image, id }) {
   );
 }
 
-export default Card;
+export default PropartyCard;

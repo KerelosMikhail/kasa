@@ -1,0 +1,35 @@
+/* The main container for the stars, aligns them horizontally */
+.star-rating {
+  display: flex;
+  align-items: center;
+  background: transparent; /* No background, but you can set one if needed */
+  border-radius: 8px; /* Slightly rounded corners for the container */
+}
+
+/* Each star sits in a 36x36px square, centered */
+.star-rating__star-container {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The star SVG itself, sized as specified */
+.star-rating__star {
+  width: 24.75px;
+  height: 24px;
+  display: block;
+}
+
+/* Active stars are colored #FF6060 using a CSS filter */
+.star-rating__star--active {
+  filter: invert(36%) sepia(99%) saturate(7492%) hue-rotate(340deg)
+    brightness(101%) contrast(104%);
+}
+
+/* Inactive stars are colored #E3E3E3 using a CSS filter */
+.star-rating__star--inactive {
+  filter: invert(92%) sepia(0%) saturate(0%) hue-rotate(180deg) brightness(97%)
+    contrast(89%);
+}
