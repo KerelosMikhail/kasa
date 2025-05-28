@@ -16,3 +16,20 @@
 .details-collapse {
   width: 582px;
 }
+
+// Responsive styles for mobile and small screens
+@media (max-width: 600px) {
+  .details-container {
+    flex-direction: column;
+    gap: 20px;
+    width: 335px;
+    margin-left: 20px;
+    margin-right: 0;
+    //margin-top: 526.88px;
+  }
+
+  .details-collapse {
+    width: 335px;
+    min-height: 30px;
+  }
+}
