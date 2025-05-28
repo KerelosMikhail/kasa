@@ -1,13 +1,15 @@
 @use "../styles/fonts" as *;
 
 .collapse {
-  background: #ff6060;
   border-radius: 5px;
   overflow: hidden;
   transition: box-shadow 0.2s;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   margin-top: 30px;
   //margin-left: 208.5px; // removed to allow reuse for property page
+
+  &.open {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); // Only when open fix for property page
+  }
 
   &__header {
     display: flex;
@@ -15,6 +17,7 @@
     justify-content: space-between;
     padding: 10px 20px 10px 10px;
     cursor: pointer;
+    background: #ff6060;
   }
 
   &__title {
@@ -27,6 +30,7 @@
     flex: 1;
     text-align: left;
     vertical-align: middle;
+    margin-left: 5px;
   }
 
   &__arrow {

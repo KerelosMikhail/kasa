@@ -12,7 +12,9 @@ function Collapse({
 
   return (
     <div
-      className={`collapse${NeededClassName ? " " + NeededClassName : ""}`}
+      className={`collapse${open ? " open" : ""}${
+        NeededClassName ? " " + NeededClassName : ""
+      }`}
       style={{ width, minHeight: height, borderRadius: "5px" }}
     >
       <div className="collapse__header">
