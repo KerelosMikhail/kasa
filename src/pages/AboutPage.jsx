@@ -7,6 +7,7 @@ function AboutPage() {
       <AboutBanner />
 
       <Collapse
+        NeededClassName="about-page"
         title="Reliability"
         paragraph="Verifying the accuracy and timeliness of information, ensuring smooth communication and providing a transparent and user-friendly experience. This includes consistently displaying accurate property details responding promptly to inquiries, and following through with requests."
         width="1023px"
@@ -14,6 +15,7 @@ function AboutPage() {
       />
 
       <Collapse
+        NeededClassName="about-page"
         title="Respect"
         paragraph="This is the detailed content that will expand and collapseProvide proper notice before entering the premises, as required by law and the lease agreement. Respect the tenant's privacy by avoiding unnecessary entries and ensuring a safe environment."
         width="1023px"
@@ -21,6 +23,7 @@ function AboutPage() {
       />
 
       <Collapse
+        NeededClassName="about-page"
         title="Service"
         paragraph="Provide quality service and maintenance, ensuring a safe and comfortable living environment for tenants."
         width="1023px"
@@ -28,6 +31,7 @@ function AboutPage() {
       />
 
       <Collapse
+        NeededClassName="about-page"
         title="Security"
         paragraph="Provide tenants with security tips and guidelines, such as how to properly use locks, windows, and alarms, and encourage them to report any suspicious activity. 
                    various measures to enhance safety and security, such as well-lit common areas, automatic locking systems, security cameras, and smart technology like video doorbells and smart locks.

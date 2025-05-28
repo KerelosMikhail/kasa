@@ -3,3 +3,14 @@
   flex-direction: column;
   align-items: center;
 }
+
+.details-container {
+  display: flex;
+  gap: 76px;
+  width: 1240px;
+  margin-top: 40px;
+}
+
+.details-collapse {
+  width: 582px;
+}

@@ -1,12 +1,18 @@
 import { useState } from "react";
 import arrow from "../assets/vector.svg";
 
-function Collapse({ title, paragraph, width = "100%", height = "auto" }) {
+function Collapse({
+  NeededClassName,
+  title,
+  paragraph,
+  width = "100%",
+  height = "auto",
+}) {
   const [open, setOpen] = useState(false);
 
   return (
     <div
-      className="collapse"
+      className={`collapse${NeededClassName ? " " + NeededClassName : ""}`}
       style={{ width, minHeight: height, borderRadius: "5px" }}
     >
       <div className="collapse__header">
