@@ -1,6 +1,7 @@
 import Carousel from "../components/Carousel";
 import StarRating from "../components/StarRating";
 import Host from "../components/Host";
+import Tags from "../components/Tags";
 
 // Using StarRating <StarRating value={3} />
 
@@ -22,7 +23,10 @@ function RentalPropertyPage() {
       <Carousel images={images} />
       <StarRating value={3} />
 
-      <Host hostName="Nathalie Jean" hostImage = {hostUrl} />
+      <Host hostName="Nathalie Jean" hostImage={hostUrl} />
+
+      <Tags tags={["WiFi", "Parking", "Pool"]} />
+      
     </div>
   );
 }
