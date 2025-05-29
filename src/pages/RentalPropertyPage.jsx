@@ -3,6 +3,7 @@ import StarRating from "../components/StarRating";
 import Host from "../components/Host";
 import Tags from "../components/Tags";
 import Collapse from "../components/Collapse";
+import Title from "../components/Title";
 
 // Using StarRating <StarRating value={3} />
 
@@ -21,6 +22,12 @@ function RentalPropertyPage() {
   return (
     <div className="rental-property-page">
       <Carousel images={images} />
+
+      <Title
+        title="Cozy loft on the Canal Saint-Martin"
+        location="Paris, Île-de-France"
+      />
+
       <StarRating value={3} />
 
       <Host hostName="Nathalie Jean" hostImage={hostUrl} />
