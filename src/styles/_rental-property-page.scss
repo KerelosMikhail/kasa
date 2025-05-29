@@ -38,7 +38,7 @@
 /* Details container (fourth row) */
 .details-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 76px;
   width: 1240px;
   margin-top: 30px;
@@ -56,67 +56,56 @@
   margin: 0;
 }
 
+.property-rating-host-row {
+  display: none; // Hide by default (desktop)
+}
+
 // Responsive styles for mobile and small screens
+
 @media (max-width: 600px) {
   .rental-property-page {
-    align-items: center;
+    align-items: flex-start;
   }
 
-  /* First row: Carousel */
-  .carousel {
+  /* Second row: Title only */
+  .property-header-row {
+    flex-direction: column;
     width: 335px;
-    height: 255px;
-    border-radius: 10px;
-    margin: 22px auto 0 20px;
-  }
-
-  /* Second row: Title */   ///////////////////
-  .title {
-    align-items: center;
-    width: 335px;
-   margin-left: 20px;
-   margin-right: 0;
+    margin-left: 20px;
+    margin-right: 0;
     margin-top: 10px;
+    gap: 0;
+  }
+  .property-header-row > :not(:first-child) {
+    display: none; // Hide Host on mobile in this row
   }
 
-  /* Third row: Tags */
+  /* Third row: Tags only */
   .property-info-row {
+    flex-direction: column;
     width: 335px;
     margin-left: 20px;
     margin-right: 0;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
+    gap: 0;
+  }
+  .property-info-row > :not(:first-child) {
+    display: none; // Hide StarRating on mobile in this row
   }
 
-  .tags {
-    width: 335px;
-  }
-
-
-
-  /* Fourth row: StarRating (left) and Host (right) */
-  .StarRating {
-    width: 335px;
-    margin-left: 20px;
-    margin-right: 0;
-    margin-bottom: 20px;
+  /* Fourth row: StarRating and Host side by side */
+  .property-rating-host-row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-  }
-
-  .host {
     width: 335px;
     margin-left: 20px;
     margin-right: 0;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 0;
   }
-
   .star-rating,
   .host {
     width: 48%;
@@ -132,15 +121,8 @@
     margin-right: 0;
     margin-top: 20px;
   }
-
   .details-collapse {
     width: 335px;
     min-height: 30px;
-  }
-
-  .equipments-list {
-    list-style: none;
-    padding-left: 20px;
-    margin: 0;
   }
 }

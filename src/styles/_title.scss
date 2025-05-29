@@ -37,9 +37,11 @@
 // Responsive styles for mobile and small screens
 @media (max-width: 600px) {
   .title-container {
+    align-items: flex-start; // Ensures left alignment
+    text-align: left; // Ensures text is left-aligned
     width: 335px;
     height: 73px;
-    margin-left: 20px;
+    // margin-left: 20px;
     margin-top: 0;
   }
 

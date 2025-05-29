@@ -43,19 +43,25 @@ function RentalPropertyPage({ gallery }) {
       {/* First row: Carousel */}
       <Carousel images={pictures} />
 
-      {/* Second row: Title on the left, Host on the right */}
+      {/* Second row: Title and Host (desktop), only Title (mobile) */}
       <div className="property-header-row">
         <Title title={title} location={location} />
         <Host hostName={host.name} hostImage={host.picture} />
       </div>
 
-      {/* Third row: Tags on the left, StarRating on the right */}
+      {/* Third row: Tags and Rating (desktop), only Tags (mobile) */}
       <div className="property-info-row">
         <Tags tags={tags} />
         <StarRating value={Number(rating)} />
       </div>
 
-      {/* Fourth row: Details container */}
+      {/* Fourth row (mobile only): StarRating and Host */}
+      <div className="property-rating-host-row">
+        <StarRating value={Number(rating)} />
+        <Host hostName={host.name} hostImage={host.picture} />
+      </div>
+
+      {/* Fourth row (desktop) / Fifth row (mobile): Details container */}
       <div className="details-container">
         <Collapse
           className="details-collapse"
