@@ -49,6 +49,12 @@
   width: 582px;
 }
 
+.equipments-list {
+  list-style: none;
+  padding-left: 20px;
+  margin: 0;
+}
+
 // Responsive styles for mobile and small screens
 @media (max-width: 600px) {
   .details-container {

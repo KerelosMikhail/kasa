@@ -6,6 +6,7 @@ import ErrorPage from "./pages/ErrorPage"; // Import Error page component
 import "./App.Scss"; // Import the SCSS file for styling
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import gallery from "../public/gallery.json";
 
 function App() {
   return (
@@ -16,7 +17,10 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/property/:id" element={<RentalPropertyPage />} />
+          <Route
+            path="/property/:id"
+            element={<RentalPropertyPage gallery={gallery} />}
+          />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </div>
