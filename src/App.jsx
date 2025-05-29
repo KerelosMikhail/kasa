@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from "react-router-dom"; // Import routing components
+import { Routes, Route } from "react-router-dom"; // Import routing components
 import HomePage from "./pages/HomePage";
 import RentalPropertyPage from "./pages/RentalPropertyPage"; // Import the Rental Property page
 import AboutPage from "./pages/AboutPage"; // Import the About Page component
@@ -16,7 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route path="/property" element={<RentalPropertyPage />} />
+          <Route path="/property/:id" element={<RentalPropertyPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </div>
