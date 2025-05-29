@@ -33,3 +33,31 @@
     align-items: flex-end;
   }
 }
+
+// Responsive styles for mobile and small screens
+@media (max-width: 600px) {
+  .title-container {
+    width: 335px;
+    height: 73px;
+    margin-left: 20px;
+    margin-top: 0;
+  }
+
+  .title-container__main {
+    font-size: 18px;
+    height: auto;
+    line-height: 143%;
+    margin-bottom: 4px;
+    white-space: normal; // Allow text to wrap to two lines
+    word-break: break-word;
+  }
+
+  .title-container__location {
+    font-size: 14px;
+    width: 323px;
+    height: 22px;
+    line-height: 143%;
+    white-space: normal;
+    word-break: break-word;
+  }
+}

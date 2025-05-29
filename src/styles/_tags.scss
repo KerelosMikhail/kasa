@@ -47,13 +47,15 @@
 // Responsive styles for mobile and small screens
 @media (max-width: 600px) {
   .tags__container {
-    width: 84px;
+    display: flex;
+    align-items: flex-start;
+    //width: 84px;
     height: 18px;
     border-radius: 10px;
   }
 
   .tags__rectangle {
-    width: 84px;
+    //width: 84px;
     height: 18px;
     border-radius: 5px;
   }

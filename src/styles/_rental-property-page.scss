@@ -38,6 +38,7 @@
 /* Details container (fourth row) */
 .details-container {
   display: flex;
+  flex-direction: column;
   gap: 76px;
   width: 1240px;
   margin-top: 30px;
@@ -57,17 +58,75 @@
 
 // Responsive styles for mobile and small screens
 @media (max-width: 600px) {
+  .rental-property-page {
+    align-items: center;
+  }
+
+  /* First row: Carousel */
+  .carousel {
+    width: 335px;
+    height: 255px;
+    border-radius: 10px;
+    margin: 22px auto 0 20px;
+  }
+
+  /* Second row: Title */
+  .property-title-row {
+    width: 335px;
+    margin-left: 20px;
+    margin-right: 0;
+    margin-top: 10px;
+  }
+
+  /* Third row: Tags */
+  .property-tags-row {
+    width: 335px;
+    margin-left: 20px;
+    margin-right: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .tags {
+    width: 335px;
+  }
+
+  /* Fourth row: StarRating (left) and Host (right) */
+  .property-rating-host-row {
+    width: 335px;
+    margin-left: 20px;
+    margin-right: 0;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .star-rating,
+  .host {
+    width: 48%;
+    min-width: 0;
+  }
+
+  /* Fifth row: Details container */
   .details-container {
     flex-direction: column;
     gap: 20px;
     width: 335px;
     margin-left: 20px;
     margin-right: 0;
-    //margin-top: 526.88px;
+    margin-top: 20px;
   }
 
   .details-collapse {
     width: 335px;
     min-height: 30px;
+  }
+
+  .equipments-list {
+    list-style: none;
+    padding-left: 20px;
+    margin: 0;
   }
 }
