@@ -8,8 +8,6 @@ import Title from "../components/Title";
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
-// Using StarRating <StarRating value={3} />
-
 function RentalPropertyPage({ gallery }) {
   // 1. Get the property id from the URL
   const { id } = useParams();
@@ -39,17 +37,6 @@ function RentalPropertyPage({ gallery }) {
     description,
     equipments,
   } = property;
-
-  // const images = [
-  //   "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-16-1.jpg",
-  //   "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-16-2.jpg",
-  //   "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-16-3.jpg",
-  //   "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-16-4.jpg",
-  //   "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-16-5.jpg",
-  // ];
-
-  // const hostUrl =
-  //   "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg";
 
   return (
     <div className="rental-property-page">
