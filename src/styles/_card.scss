@@ -7,6 +7,19 @@
   border-radius: 10px;
   background: #ff6060;
   overflow: hidden;
+  cursor: pointer;
+
+  .gallery-card__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 340px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: 0;
+    //pointer-events: none;
+  }
 
   &__gradient {
     position: absolute;

@@ -1,0 +1,122 @@
+@use "./fonts";
+
+.carousel {
+  display: flex;
+  position: relative;
+  width: 1240px;
+  height: 415px;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 40px auto 32px 100px;
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+    display: block;
+  }
+
+  &__arrow-container {
+    position: absolute;
+    width: 96px;
+    height: 119.64px;
+    top: 140.83px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    opacity: 0.87;
+    cursor: pointer;
+
+    &--left {
+      left: 0;
+      top: 148.3px;
+    }
+    &--right {
+      right: 0;
+      left: auto;
+      top: 140.83px;
+    }
+  }
+
+  &__arrow {
+    width: 46.68px;
+    height: 79.2px;
+    margin-top: 8.4px;
+    margin-left: 23.36px; // left arrow
+  }
+
+  &__arrow-container--right .carousel__arrow {
+    margin-right: 25.96px;
+  }
+
+  &__counter {
+    position: absolute;
+    width: 24px;
+    height: 32.4px;
+    left: 50%;
+    top: 357.67px;
+    transform: translateX(-50%);
+    font-family: fonts.$main-font;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 143%;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+}
+
+// Responsive styles for mobile and small screens
+@media (max-width: 600px) {
+  .carousel {
+    width: 335px;
+    height: 255px;
+    border-radius: 10px;
+    margin: 22px auto 0 auto;
+  }
+
+  .carousel__image {
+    border-radius: 10px;
+  }
+
+  .carousel__arrow-container {
+    width: 24px;
+    height: 24px;
+    opacity: 0.87;
+    background: transparent;
+
+    &--left {
+      left: auto;
+      top: 116px;
+    }
+    &--right {
+      left: 317.5px;
+      top: 116px;
+      right: 0;
+    }
+  }
+
+  .carousel__arrow {
+    width: 11.67px;
+    height: 19.38px;
+    margin: 0;
+  }
+
+  .carousel__counter {
+    width: 24px;
+    height: 32.4px;
+    left: 50%;
+    top: 210px;
+    font-size: 13px;
+    border-radius: 0;
+    transform: translateX(-50%);
+  }
+
+  .carousel__counter {
+    font-size: 12px;
+  }
+}

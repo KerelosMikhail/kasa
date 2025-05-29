@@ -1,13 +1,15 @@
 @use "../styles/fonts" as *;
 
 .collapse {
-  background: #ff6060;
   border-radius: 5px;
   overflow: hidden;
   transition: box-shadow 0.2s;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  margin-top: 30px;
-  margin-left: 208.5px;
+  // margin-top: 30px; // removed to allow reuse for property page
+  // margin-left: 208.5px; // removed to allow reuse for property page
+
+  &.open {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); // Only when open fix for property page
+  }
 
   &__header {
     display: flex;
@@ -15,6 +17,7 @@
     justify-content: space-between;
     padding: 10px 20px 10px 10px;
     cursor: pointer;
+    background: #ff6060;
   }
 
   &__title {
@@ -27,6 +30,7 @@
     flex: 1;
     text-align: left;
     vertical-align: middle;
+    margin-left: 5px;
   }
 
   &__arrow {
@@ -58,12 +62,24 @@
       line-height: 143%;
       color: #000;
       margin: 0;
+      text-align: justify;
+      gap: 10px;
+      opacity: 0;
+      transition: opacity 0.4s ease;
     }
-
     &.open {
-      max-height: 1000px; // Set a large enough value to allow for expansion
+      max-height: 1000px; // Large enough value to allow for expansion
+    }
+    p {
+      opacity: 1;
+      transition: opacity 0.4s 0.1s ease;
     }
   }
+}
+
+.about-page {
+  margin-left: 208.5px;
+  margin-top: 30px;
 }
 
 // Responsive styles for mobile and small screens
@@ -72,7 +88,7 @@
     width: 335px !important;
     min-height: 30px !important;
     border-radius: 5px;
-    margin: 22px auto;
+    // margin: 20px auto;
 
     &__header {
       padding: 10px 10px 10px;
@@ -98,5 +114,9 @@
         font-size: 13px;
       }
     }
+  }
+  .about-page {
+    margin-left: 20px;
+    margin-top: 20px;
   }
 }

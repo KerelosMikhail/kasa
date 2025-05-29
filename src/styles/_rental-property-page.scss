@@ -1,0 +1,128 @@
+.rental-property-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Second row: Title (left), Host (right) */
+.property-header-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1240px;
+  margin-top: 10px;
+  margin-left: 100px;
+  margin-right: auto;
+}
+
+/* Third row: Tags (left), StarRating (right) */
+.property-info-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1240px;
+  margin-left: 100px;
+  margin-right: auto;
+}
+
+.tags {
+  width: 635px; // Match Title width
+}
+
+.star-rating {
+  width: 167px; // Match Host width
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Details container (fourth row) */
+.details-container {
+  display: flex;
+  flex-direction: row;
+  gap: 76px;
+  width: 1240px;
+  margin-top: 30px;
+  margin-left: 100px;
+  margin-right: auto;
+}
+
+.details-collapse {
+  width: 582px;
+}
+
+.equipments-list {
+  list-style: none;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.property-rating-host-row {
+  display: none; // Hide by default (desktop)
+}
+
+// Responsive styles for mobile and small screens
+
+@media (max-width: 600px) {
+  .rental-property-page {
+    align-items: flex-start;
+  }
+
+  /* Second row: Title only */
+  .property-header-row {
+    flex-direction: column;
+    width: 335px;
+    margin-left: 20px;
+    margin-right: 0;
+    margin-top: 10px;
+    gap: 0;
+  }
+  .property-header-row > :not(:first-child) {
+    display: none; // Hide Host on mobile in this row
+  }
+
+  /* Third row: Tags only */
+  .property-info-row {
+    flex-direction: column;
+    width: 335px;
+    margin-left: 20px;
+    margin-right: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
+    gap: 0;
+  }
+  .property-info-row > :not(:first-child) {
+    display: none; // Hide StarRating on mobile in this row
+  }
+
+  /* Fourth row: StarRating and Host side by side */
+  .property-rating-host-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 335px;
+    margin-left: 20px;
+    margin-right: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  .star-rating,
+  .host {
+    width: 48%;
+    min-width: 0;
+  }
+
+  /* Fifth row: Details container */
+  .details-container {
+    flex-direction: column;
+    gap: 20px;
+    width: 335px;
+    margin-left: 20px;
+    margin-right: 0;
+    margin-top: 20px;
+  }
+  .details-collapse {
+    width: 335px;
+    min-height: 30px;
+  }
+}
