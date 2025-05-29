@@ -21,33 +21,35 @@ function RentalPropertyPage() {
 
   return (
     <div className="rental-property-page">
+      {/* First row: Carousel */}
       <Carousel images={images} />
 
-      <Title
-        title="Cozy loft on the Canal Saint-Martin"
-        location="Paris, Île-de-France"
-      />
+      {/* Second row: Title on the left, Host on the right */}
+      <div className="property-header-row">
+        <Title
+          title="Cozy loft on the Canal Saint-Martin"
+          location="Paris, Île-de-France"
+        />
+        <Host hostName="Nathalie Jean" hostImage={hostUrl} />
+      </div>
 
-      <StarRating value={3} />
+      {/* Third row: Tags on the left, StarRating on the right */}
+      <div className="property-info-row">
+        <Tags tags={["WiFi", "Parking", "Pool"]} />
+        <StarRating value={3} />
+      </div>
 
-      <Host hostName="Nathalie Jean" hostImage={hostUrl} />
-
-      <Tags tags={["WiFi", "Parking", "Pool"]} />
-
+      {/* Fourth row: Details container */}
       <div className="details-container">
         <Collapse
           className="details-collapse"
           title="Service"
           paragraph="Loream ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          width="582px"
-          height="52px"
         />
         <Collapse
           className="details-collapse"
           title="Amenities"
           paragraph="Loream ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-          width="582px"
-          height="52px"
         />
       </div>
     </div>

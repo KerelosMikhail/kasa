@@ -4,11 +4,43 @@
   align-items: center;
 }
 
+/* Second row: Title (left), Host (right) */
+.property-header-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1240px;
+  margin-top: 10px;
+  margin-left: 100px;
+  margin-right: auto;
+}
+
+/* Third row: Tags (left), StarRating (right) */
+.property-info-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1240px;
+  margin-left: 100px;
+  margin-right: auto;
+}
+
+.tags {
+  width: 635px; // Match Title width
+}
+
+.star-rating {
+  width: 167px; // Match Host width
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Details container (fourth row) */
 .details-container {
   display: flex;
   gap: 76px;
   width: 1240px;
-  margin-top: 40px;
+  margin-top: 30px;
   margin-left: 100px;
   margin-right: auto;
 }
