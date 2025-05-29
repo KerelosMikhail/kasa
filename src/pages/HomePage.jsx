@@ -20,7 +20,7 @@ function HomePage() {
     <main className="home-page">
       <Banner />
 
-      {/*Rendering a Card for each item  and check if it's null*/}
+      {/*Rendering a Card for each item and check if it's null*/}
       <div className="gallery">
         {gallery.length > 0 ? (
           gallery.map((item) => (
