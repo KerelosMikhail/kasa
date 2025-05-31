@@ -1,4 +1,5 @@
-@use "./fonts";
+@use "./fonts" as *;
+@use "./colors" as *;
 
 .title-container {
   display: flex;
@@ -9,11 +10,11 @@
   //margin-left: 100px;
 
   &__main {
-    font-family: fonts.$main-font;
+    font-family: $main-font;
     font-weight: 500;
     font-size: 36px;
     line-height: 143%;
-    color: #ff6060;
+    color: $primary-color;
     letter-spacing: 0;
     height: 51px;
     margin-bottom: 8px;
@@ -22,11 +23,11 @@
   }
 
   &__location {
-    font-family: fonts.$main-font;
+    font-family: $main-font;
     font-weight: 500;
     font-size: 18px;
     line-height: 143%;
-    color: #000000;
+    color: $secondary-color;
     letter-spacing: 0;
     height: 26px;
     display: flex;

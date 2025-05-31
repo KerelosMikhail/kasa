@@ -1,10 +1,11 @@
-@use "./fonts";
+@use "./fonts" as *;
+@use "./colors" as *;
 
 /* Main rectangle container */
 .host {
   width: 167px;
   height: 64px;
-  background: #fff;
+  background: $white-text;
   border-radius: 12px;
   display: flex;
   flex-direction: row;
@@ -17,12 +18,12 @@
 
 /* Host name styling */
 .host__name {
-  font-family: fonts.$main-font;
+  font-family: $main-font;
   font-weight: 500;
   font-size: 18px;
   line-height: 143%;
   letter-spacing: 0;
-  color: #ff6060;
+  color: $primary-color;
   width: 93px;
   height: 52px;
   display: flex;
@@ -38,7 +39,7 @@
 .host__image-circle {
   width: 64px;
   height: 64px;
-  background: #c4c4c4;
+  background: $circle-bg;
   border-radius: 50%;
   display: flex;
   align-items: center;

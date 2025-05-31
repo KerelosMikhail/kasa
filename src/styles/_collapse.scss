@@ -1,4 +1,5 @@
-@use "../styles/fonts" as *;
+@use "./fonts" as *;
+@use "./colors" as *;
 
 .collapse {
   border-radius: 5px;
@@ -17,7 +18,7 @@
     justify-content: space-between;
     padding: 10px 20px 10px 10px;
     cursor: pointer;
-    background: #ff6060;
+    background: $primary-color;
   }
 
   &__title {
@@ -25,7 +26,7 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 143%;
-    color: #fff;
+    color: $white-text;
     letter-spacing: 0;
     flex: 1;
     text-align: left;
@@ -49,7 +50,7 @@
 
   &__content {
     overflow: hidden;
-    background: #fff;
+    background: $white-text;
     border-radius: 0 0 5px 5px;
     transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s;
     max-height: 0;
@@ -60,7 +61,7 @@
       font-weight: 400;
       font-size: 18px;
       line-height: 143%;
-      color: #000;
+      color: $secondary-color;
       margin: 0;
       text-align: justify;
       gap: 10px;

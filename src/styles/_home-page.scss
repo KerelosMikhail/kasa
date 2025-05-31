@@ -1,3 +1,5 @@
+@use "./colors" as *;
+
 .home-page {
   display: flex;
   flex-direction: column;
@@ -6,7 +8,7 @@
 
   .gallery {
     width: 1240px;
-    background: #f6f6f6;
+    background: $gray-bg;
     border-radius: 25px;
     margin-left: 100px; // Align with header and banner
     margin-top: 40px;
@@ -37,7 +39,7 @@
       margin-top: 22px;
       padding: 22px 0;
       align-items: center;
-      background: #ffffff;
+      background: $white-text;
       flex-direction: column;
     }
   }
