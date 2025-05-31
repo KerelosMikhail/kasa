@@ -1,3 +1,5 @@
+@use "./colors" as *;
+
 .about-banner {
   position: relative;
   width: 1240px;
@@ -14,7 +16,7 @@
     width: 1240px;
     height: 223px;
     border-radius: 25px;
-    background: #000;
+    background: $secondary-color;
     opacity: 0.3;
     mix-blend-mode: darken;
     z-index: 3;

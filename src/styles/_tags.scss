@@ -1,4 +1,5 @@
-@use "./fonts";
+@use "./fonts" as *;
+@use "./colors" as *;
 
 .tags {
   display: flex;
@@ -10,7 +11,7 @@
 .tags__container {
   //width: 115px;
   height: 25px;
-  border: 1px solid #000000;
+  border: 1px solid $secondary-color;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,14 +23,14 @@
   //width: 115px;
   height: 25px;
   border-radius: 10px;
-  background: #ff6060;
+  background: $primary-color;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .tags__text {
-  font-family: fonts.$main-font;
+  font-family: $main-font;
   font-weight: 700;
   font-size: 14px;
   line-height: 143%;
