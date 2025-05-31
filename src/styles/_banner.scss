@@ -1,14 +1,15 @@
 // @use "../styles/fonts" as *;
 @use "./fonts" as *;
 @use "./colors" as *;
+@use "./spacing" as *;
 
 .banner {
   position: relative;
   width: 1240px;
   height: 223px;
-  margin-left: 100px;
-  margin-top: 40px;
-  border-radius: 25px;
+  margin-left: $spacing-header-left;
+  margin-top: $spacing-banner-top;
+  border-radius: $spacing-banner-radius;
   border: 1px solid $secondary-color;
   box-shadow: 0 4px 4px 0 $banner-mask;
   overflow: hidden;

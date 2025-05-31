@@ -1,5 +1,6 @@
 @use "./fonts" as *;
 @use "./colors" as *;
+@use "./spacing" as *;
 
 .collapse {
   border-radius: 5px;
@@ -16,7 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px 10px 10px;
+    padding: $spacing-collapse-padding;
     cursor: pointer;
     background: $primary-color;
   }
@@ -93,7 +94,7 @@
     // margin: 20px auto;
 
     &__header {
-      padding: 10px 10px 10px;
+      padding: $spacing-collapse-padding-mobile;
     }
 
     &__title {
@@ -111,7 +112,7 @@
     }
 
     &__content {
-      padding: 0 10px 0 0;
+      padding: $spacing-collapse-content-padding-mobile;
       p {
         font-size: 13px;
       }

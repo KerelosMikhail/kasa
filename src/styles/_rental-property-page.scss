@@ -1,3 +1,5 @@
+@use "./spacing" as *;
+
 .rental-property-page {
   display: flex;
   flex-direction: column;
@@ -10,8 +12,8 @@
   flex-direction: row;
   justify-content: space-between;
   width: 1240px;
-  margin-top: 10px;
-  margin-left: 100px;
+  margin-top: $spacing-banner-top;
+  margin-left: $spacing-header-left;
   margin-right: auto;
 }
 
@@ -21,7 +23,7 @@
   flex-direction: row;
   justify-content: space-between;
   width: 1240px;
-  margin-left: 100px;
+  margin-left: $spacing-header-left;
   margin-right: auto;
 }
 
@@ -39,10 +41,10 @@
 .details-container {
   display: flex;
   flex-direction: row;
-  gap: 76px;
+  gap: $spacing-details-gap;
   width: 1240px;
-  margin-top: 30px;
-  margin-left: 100px;
+  margin-top: $spacing-details-margin-top;
+  margin-left: $spacing-header-left;
   margin-right: auto;
 }
 
