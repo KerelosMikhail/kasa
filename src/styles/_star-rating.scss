@@ -1,9 +1,11 @@
+@use "./colors" as *;
+
 /* The main container for the stars, aligns them horizontally */
 .star-rating {
   display: flex;
   align-items: center;
-  background: transparent; /* No background, but you can set one if needed */
-  border-radius: 8px; /* Slightly rounded corners for the container */
+  background: transparent;
+  border-radius: 8px;
   width: 196px;
   height: 36px;
 }

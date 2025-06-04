@@ -1,10 +1,13 @@
+@use "./colors" as *;
+@use "./spacing" as *;
+
 .header {
   width: 1240px;
   height: 68px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-left: 100px;
+  margin-left: $spacing-header-left;
   margin-right: auto;
 
   &__logo {
@@ -23,7 +26,7 @@
   &__link {
     font-weight: 500;
     font-size: 24px;
-    color: #000000;
+    color: $secondary-color;
     text-decoration: none;
     border-bottom: 2px solid transparent;
     padding-bottom: 4px;

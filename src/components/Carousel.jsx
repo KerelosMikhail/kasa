@@ -5,21 +5,34 @@ import leftArrow from "../assets/left-arrow.svg";
 function Carousel({ images = [] }) {
   const total = images.length;
   const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState("right"); // Track scroll direction
 
   if (total === 0) return null;
 
-  const goPrev = () =>
+  const goPrev = () => {
+    setDirection("left");
     setCurrent((prev) => (prev === 0 ? total - 1 : prev - 1));
-  const goNext = () =>
+  };
+  const goNext = () => {
+    setDirection("right");
     setCurrent((prev) => (prev === total - 1 ? 0 : prev + 1));
+  };
 
   return (
     <div className="carousel">
-      <img
-        src={images[current]}
-        alt={`Property ${current + 1}`}
-        className="carousel__image"
-      />
+      <div
+        className={`carousel__image-wrapper ${
+          direction === "right" ? "slide-right" : "slide-left"
+        }`}
+        key={current} // Key forces re-mount for animation
+      >
+        <img
+          src={images[current]}
+          alt={`Property ${current + 1}`}
+          className="carousel__image"
+        />
+      </div>
+
       {total > 1 && (
         <>
           {/* Left Arrow */}

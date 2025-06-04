@@ -1,11 +1,12 @@
-@use "../styles/fonts";
+@use "./fonts" as *;
+@use "./colors" as *;
 
 .gallery-card {
   position: relative;
   width: 340px;
   height: 340px;
   border-radius: 10px;
-  background: #ff6060;
+  background: $primary-color;
   overflow: hidden;
   cursor: pointer;
 
@@ -45,12 +46,12 @@
     top: 294px;
     width: 300px;
     height: 26px;
-    font-family: fonts.$main-font;
+    font-family: $main-font;
     font-weight: 700;
     font-size: 18px;
     line-height: 143%;
     letter-spacing: 0;
-    color: #fff;
+    color: $white-text;
     z-index: 2;
     display: flex;
     align-items: flex-end;

@@ -1,16 +1,18 @@
-@use "./fonts";
+@use "./fonts" as *;
+@use "./colors" as *;
+@use "./spacing" as *;
 
 .footer {
   width: 1440px;
   height: 209px;
-  background: #000000;
+  background: $secondary-color;
   position: relative;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  margin-top: 30px;
+  margin-top: $spacing-footer-margin-top;
 
   &__logo {
     width: 122px;
@@ -21,11 +23,11 @@
   }
 
   &__text {
-    color: #ffffff;
+    color: $white-text;
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 30px;
-    font-family: fonts.$main-font;
+    font-family: $main-font;
     text-align: center;
     width: 100%;
   }
@@ -34,7 +36,7 @@
   @media (max-width: 600px) {
     width: 375px;
     height: 209px;
-    margin-top: 22px;
+    margin-top: $spacing-footer-margin-top-mobile;
 
     &__logo {
       top: 66px;
@@ -47,7 +49,7 @@
       font-size: 12px;
       font-weight: 500;
       width: 133.59px;
-      font-family: fonts.$main-font;
+      font-family: $main-font;
       margin-bottom: 30px;
       text-align: center;
       white-space: normal;

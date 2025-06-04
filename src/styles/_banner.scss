@@ -1,15 +1,17 @@
 // @use "../styles/fonts" as *;
-@use "./fonts";
+@use "./fonts" as *;
+@use "./colors" as *;
+@use "./spacing" as *;
 
 .banner {
   position: relative;
   width: 1240px;
   height: 223px;
-  margin-left: 100px;
-  margin-top: 40px;
-  border-radius: 25px;
-  border: 1px solid #000;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  margin-left: $spacing-header-left;
+  margin-top: $spacing-banner-top;
+  border-radius: $spacing-banner-radius;
+  border: 1px solid $secondary-color;
+  box-shadow: 0 4px 4px 0 $banner-mask;
   overflow: hidden;
 
   &__image {
@@ -32,7 +34,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); // 60% black mask
+    background: $banner-mask;
     border-radius: 25px;
     z-index: 2;
     mix-blend-mode: darken;
@@ -56,15 +58,15 @@
   &__text {
     width: 100%;
     text-align: center;
-    font-family: fonts.$main-font;
+    font-family: $main-font;
     font-size: 48px;
     font-weight: 700;
     line-height: 143%;
     color: #fff;
     // -webkit-text-stroke: 1px #000;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-      1px 1px 0 #000, 0px 4px 4px rgba(0, 0, 0, 0.25);
-    // text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: -1px -1px 0 $secondary-color, 1px -1px 0 $secondary-color,
+      -1px 1px 0 $secondary-color, 1px 1px 0 $secondary-color,
+      0px 4px 4px $banner-text-shadow;
     background: transparent;
     z-index: 4;
     padding: 16px 0;

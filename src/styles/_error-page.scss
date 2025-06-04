@@ -1,4 +1,5 @@
-@use "../styles/fonts" as *;
+@use "./fonts" as *;
+@use "./colors" as *;
 
 .error-page {
   display: flex;
@@ -17,7 +18,7 @@
     font-size: 288px;
     line-height: 143%;
     letter-spacing: 0;
-    color: #ff6060;
+    color: $primary-color;
     width: 597px;
     // height: 263px;
     display: flex;
@@ -32,7 +33,7 @@
     font-size: 36px;
     line-height: 143%;
     letter-spacing: 0;
-    color: #ff6060;
+    color: $primary-color;
     width: 872px;
     // height: 51px;
     display: flex;
@@ -47,7 +48,7 @@
     font-size: 18px;
     line-height: 143%;
     letter-spacing: 0;
-    color: #000;
+    color: $secondary-color;
     width: 284px;
     // height: 26px;
     display: flex;
@@ -63,7 +64,7 @@
     margin: 0 auto 40px auto;
 
     &:hover {
-      color: #ff6060;
+      color: $primary-color
     }
   }
 }
