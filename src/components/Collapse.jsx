@@ -2,7 +2,7 @@ import { useState } from "react";
 import arrow from "../assets/vector.svg";
 
 function Collapse({
-  NeededClassName,
+  NeededClassName,  //the class name should be small letters
   title,
   paragraph,
   width = "100%",
